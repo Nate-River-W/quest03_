@@ -1,0 +1,29 @@
+int my_strcmp(char* s1, char* s2){
+	int i2 = 0;
+	int i = 0;
+	for(i = 0, i2 = 0; s1[i] !='\0' && s2[i2] != '\0'; i++,i2++)
+	{
+		if(s1 == s2)
+		{	
+			return 0;	
+		}
+		else if(s1[i]< s2[i2])
+		{
+			return -1;
+		}
+		else
+		{
+			return 1;
+		}
+	}
+	
+}
+
+
+int main() {
+  char *s1 = "bd";
+  char *s2 = "abc";
+  
+  printf("my_strcmp -> %d\n", my_strcmp(s1, s2));
+  return 0;
+}

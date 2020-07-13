@@ -1,0 +1,27 @@
+  
+#include <stdio.h>
+#include <string.h>
+
+char* my_strrchr(char* param_1, char param_2)
+{	char* list = "";
+	int i;
+	for(i = strlen(param_1); param_1[i] != param_1[0]; i--)
+	{	
+		if(param_2 == param_1[i] )
+		{
+			list = &param_1[i];
+			return list;
+		}	
+		
+	}
+	
+	
+	
+}
+int main() 
+{
+	char* p1 = "abc";
+	char p2 = 'd';
+	printf("%s", my_strrchr(p1,p2));
+	return 0;
+}

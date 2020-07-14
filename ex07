@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+void struc (int array[])
+{	
+	int i,t;
+	typedef struct s_integer_array
+	{
+	    int size;
+	    int* array[];
+	} int_ar;
+	  int_ar st;
+	st.size = sizeof(array);
+	for(i = 0; i != sizeof(array)/2 ; i++)
+	{	
+		t = array[i];
+		st.array[i] = array[i];
+		printf("%d, ", st.array[i]);
+		array[i] = t;
+		
+	}
+	printf("and size: %d", st.size/2);
+
+}
+
+
+int main(void) {
+	
+	int ar[] = {13,12,885,18};
+	struc(ar);
+	return 0;
+}
